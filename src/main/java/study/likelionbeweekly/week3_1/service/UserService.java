@@ -1,7 +1,7 @@
-package study.likelionbeweekly.week3.service;
+package study.likelionbeweekly.week3_1.service;
 
 import org.springframework.ui.Model;
-import study.likelionbeweekly.week3.domain.User;
+import study.likelionbeweekly.week3_1.domain.User;
 
 public interface UserService {
 

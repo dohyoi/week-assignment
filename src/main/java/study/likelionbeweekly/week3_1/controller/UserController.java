@@ -1,4 +1,4 @@
-package study.likelionbeweekly.week3.controller;
+package study.likelionbeweekly.week3_1.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -6,7 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import study.likelionbeweekly.week3.service.UserService;
+import study.likelionbeweekly.week3_1.service.UserService;
 
 @Controller
 @RequiredArgsConstructor

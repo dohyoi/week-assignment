@@ -1,12 +1,12 @@
-package study.likelionbeweekly.week3.service;
+package study.likelionbeweekly.week3_1.service;
 
 import java.util.Objects;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
-import study.likelionbeweekly.week3.domain.User;
-import study.likelionbeweekly.week3.repository.UserRepository;
+import study.likelionbeweekly.week3_1.domain.User;
+import study.likelionbeweekly.week3_1.repository.UserRepository;
 
 @Slf4j
 @Service

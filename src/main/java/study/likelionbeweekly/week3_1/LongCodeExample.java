@@ -1,4 +1,4 @@
-package study.likelionbeweekly.week3frame;
+package study.likelionbeweekly.week3_1;
 
 import java.io.BufferedReader;
 import java.io.IOException;

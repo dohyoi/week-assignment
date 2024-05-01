@@ -1,9 +1,9 @@
-package study.likelionbeweekly.week3frame.repository;
+package study.likelionbeweekly.week3_1.repository;
 
 import java.util.HashMap;
 import java.util.Map;
 import org.springframework.stereotype.Repository;
-import study.likelionbeweekly.week3frame.domain.User;
+import study.likelionbeweekly.week3_1.domain.User;
 
 @Repository
 public class InMemoryUserRepository implements UserRepository {

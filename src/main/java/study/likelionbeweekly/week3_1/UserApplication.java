@@ -1,4 +1,4 @@
-package study.likelionbeweekly.week3;
+package study.likelionbeweekly.week3_1;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,8 +1,8 @@
-package study.likelionbeweekly.week3frame.service;
+package study.likelionbeweekly.week3_1.service;
 
 import java.util.Objects;
 import org.springframework.ui.Model;
-import study.likelionbeweekly.week3frame.domain.User;
+import study.likelionbeweekly.week3_1.domain.User;
 
 // 이곳에 서비스 빈을 등록해보세요.
 public class UserServiceImpl implements UserService {

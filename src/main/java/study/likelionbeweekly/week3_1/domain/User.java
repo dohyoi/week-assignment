@@ -1,4 +1,4 @@
-package study.likelionbeweekly.week3.domain;
+package study.likelionbeweekly.week3_1.domain;
 
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
