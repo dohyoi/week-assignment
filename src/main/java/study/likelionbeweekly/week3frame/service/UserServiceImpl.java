@@ -16,7 +16,7 @@ public class UserServiceImpl implements UserService {
 	}
 
 	private User findUser(String id) {
-		// 이곳에 userRepository.findById 에 id 를 전달해서 User 를 반환해주세요.
+		return null;// null 대신 userRepository.findById 에 id 를 전달해서 User 를 반환해주세요.
 	}
 
 	private User createUser(String id, String password) {
