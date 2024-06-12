@@ -23,6 +23,10 @@ public class MemberService {
         Member member = memberRepository.findByEmail(loginEmail)
                 .orElseThrow(EntityNotFoundException::new);
 
+        checkLoginEmailAndPassword(loginEmail, member, loginPassword);
+    }
+
+    private void checkLoginEmailAndPassword(String loginEmail, Member member, String loginPassword) {
         if (!loginEmail.equals(member.getEmail()) || !loginPassword.equals(member.getPassword())) {
             throw new IllegalArgumentException("비밀번호 불일치");
         }
