@@ -35,9 +35,7 @@ public class MemberService {
         String joinPassword = request.password();
 
         Optional<Member> optionalMember = memberRepository.findByEmail(joinEmail);
-        if (optionalMember.isPresent()) {
-            throw new IllegalArgumentException("중복 이메일");
-        }
+        checkDuplicateEmail(optionalMember);
 
         Member member = new Member(joinName, joinEmail, joinPassword);
         memberRepository.save(member);
@@ -53,13 +51,17 @@ public class MemberService {
         String updatePassword = request.password();
 
         Optional<Member> optionalMember = memberRepository.findByEmail(updateEmail);
-        if (optionalMember.isPresent()) {
-            throw new IllegalArgumentException("중복 이메일");
-        }
+        checkDuplicateEmail(optionalMember);
 
         member.setName(updateName);
         member.setEmail(updateEmail);
         member.setPassword(updatePassword);
+    }
+
+    private void checkDuplicateEmail(Optional<Member> optionalMember) {
+        if (optionalMember.isPresent()) {
+            throw new IllegalArgumentException("중복 이메일");
+        }
     }
 
     @Transactional

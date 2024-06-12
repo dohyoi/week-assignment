@@ -42,15 +42,15 @@ public class CommentService {
         commentRepository.save(comment);
     }
 
-    private Post getPost(CreateCommentRequest request) {
-        Long postId = request.postId();
-        return postRepository.findById(postId)
-                .orElseThrow(EntityExistsException::new);
-    }
-
     private Member getMember(CreateCommentRequest request) {
         Long memberId = request.memberId();
         return memberRepository.findById(memberId)
+                .orElseThrow(EntityExistsException::new);
+    }
+
+    private Post getPost(CreateCommentRequest request) {
+        Long postId = request.postId();
+        return postRepository.findById(postId)
                 .orElseThrow(EntityExistsException::new);
     }
 
