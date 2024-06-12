@@ -67,7 +67,6 @@ public class CommentService {
     public void deleteComment(Long id) {
         Comment comment = commentRepository.findById(id)
                 .orElseThrow(EntityExistsException::new);
-
         comment.setDeleted(true);
     }
 }
