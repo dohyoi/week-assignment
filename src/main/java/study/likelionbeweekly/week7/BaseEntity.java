@@ -31,4 +31,7 @@ public abstract class BaseEntity {
     @Setter
     @Column(columnDefinition = "boolean default false")
     private boolean isDeleted;
+//
+//    @Column(columnDefinition = "TIMESTAMP")
+//    private LocalDateTime deletedAt;
 }

@@ -35,7 +35,7 @@ public class CommentController {
     }
 
     @PatchMapping("/{id}")
-    public ResponseEntity<String> update(@PathVariable Long id,
+    public ResponseEntity<String> update(@PathVariable(name = "id") Long id,
                                          @RequestBody UpdateCommentRequest request) {
 
         commentService.updateComment(id, request);
@@ -43,7 +43,7 @@ public class CommentController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> delete(@PathVariable Long id) {
+    public ResponseEntity<String> delete(@PathVariable(name = "id") Long id) {
         commentService.deleteComment(id);
         return ResponseEntity.ok().body("ok");
     }

@@ -3,7 +3,6 @@ package study.likelionbeweekly.week7.post;
 import jakarta.persistence.EntityNotFoundException;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
@@ -14,7 +13,6 @@ import study.likelionbeweekly.week7.post.dto.FindAllPostsResponse;
 import study.likelionbeweekly.week7.post.dto.FindPostResponse;
 import study.likelionbeweekly.week7.post.dto.UpdatePostRequest;
 
-@Slf4j
 @Service
 @RequiredArgsConstructor
 @Transactional(readOnly = true)

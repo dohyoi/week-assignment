@@ -35,13 +35,13 @@ public class PostController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<FindPostResponse> find(@PathVariable Long id) {
+    public ResponseEntity<FindPostResponse> find(@PathVariable(name = "id") Long id) {
         FindPostResponse response = postService.findById(id);
         return ResponseEntity.ok().body(response);
     }
 
     @PatchMapping("/{id}")
-    public ResponseEntity<String> update(@PathVariable Long id,
+    public ResponseEntity<String> update(@PathVariable(name = "id") Long id,
                                          @RequestBody UpdatePostRequest request) {
 
         postService.updatePost(id, request);
@@ -49,7 +49,7 @@ public class PostController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> delete(@PathVariable Long id) {
+    public ResponseEntity<String> delete(@PathVariable(name = "id") Long id) {
         postService.deletePost(id);
         return ResponseEntity.ok().body("ok");
     }

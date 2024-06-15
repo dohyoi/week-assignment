@@ -16,8 +16,8 @@ import study.likelionbeweekly.week7.member.Member;
 @Getter
 @Setter
 @Entity
-@AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
+@AllArgsConstructor(access = AccessLevel.PROTECTED)
 public class Post extends BaseEntity {
 
     @Column(length = 64, nullable = false)

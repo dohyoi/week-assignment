@@ -16,8 +16,8 @@ import study.likelionbeweekly.week7.post.Post;
 
 @Getter
 @Entity
-@AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
+@AllArgsConstructor(access = AccessLevel.PROTECTED)
 public class Comment extends BaseEntity {
 
     @Setter
