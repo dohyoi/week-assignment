@@ -26,9 +26,6 @@ public class CommentService {
     public FindAllCommentsResponse findAllComments(FindAllCommentsRequest request) {
         Long postId = request.postId();
         List<Comment> comments = commentRepository.findByPostId(postId);
-        if (comments.isEmpty()) {
-            return null;
-        }
         return FindAllCommentsResponse.of(comments);
     }
 
