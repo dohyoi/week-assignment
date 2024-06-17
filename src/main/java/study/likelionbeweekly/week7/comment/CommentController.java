@@ -1,6 +1,7 @@
 package study.likelionbeweekly.week7.comment;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -31,7 +32,7 @@ public class CommentController {
     @PostMapping
     public ResponseEntity<String> create(@RequestBody CreateCommentRequest request) {
         commentService.createComment(request);
-        return ResponseEntity.ok().body("ok");
+        return ResponseEntity.status(HttpStatus.CREATED).body("created");
     }
 
     @PatchMapping("/{id}")
